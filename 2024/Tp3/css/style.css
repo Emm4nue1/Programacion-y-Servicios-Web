@@ -1,0 +1,127 @@
+/***** Section Page-1  *****/
+header {
+  text-align: center;
+  font: bold normal medium Helvetica;
+  padding: 10px;
+}
+.nav-link{
+    transition: all 0.3s;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    color: #5aa400;
+}
+
+.Menu {
+  height: 50px;
+  border: thin solid white;
+  background-color: #bfbfbf;
+  font: normal normal bold x-large Verdana;
+  text-align: center;
+  align-content: center;
+}
+
+/* Estilo personalizado para pantallas xs */
+@media (max-width: 768px) {
+  .Menu {
+    background-color: #00b0f0;
+  }
+}
+
+/* Estilo personalizado para pantallas md */
+@media (min-width: 768px) and (max-width: 992px) {
+  .Menu {
+    background-color: #ffd966;
+  }
+}
+
+.Img {
+  height: 260px;
+  background: #8eaadb;
+  text-align: center;
+  border: thin solid white;
+  font: normal normal bold x-large Verdana;
+  align-content: center;
+}
+
+.Art {
+  height: 160px;
+  background: #7030a0;
+  text-align: center;
+  border: thin solid white;
+  font: normal normal bold x-large Verdana;
+  align-content: center;
+}
+
+footer {
+  height: 50px;
+  background: #a8d08d;
+  text-align: center;
+  border: thin solid white;
+  font: normal normal bold x-large Verdana;
+  align-content: center;
+}
+
+/***** End Section Page-1 *****/
+
+/***** Section PAGE-A *****/
+
+
+
+/***** End Section PAGE-A *****/
+
+/***** Section PAGE-B *****/
+.page-b-h {
+  background: skyblue;
+  color: white;
+  height: auto;
+  font-size: 20px;
+  align-content: center;
+}
+
+.page-b-h2 {
+  background: rgb(11, 66, 89);
+  color: white;
+  height: auto;
+  font-size: 20px;
+  align-content: center;
+}
+
+fieldset {
+  background: rgb(11, 66, 89);
+}
+
+/***** End Section PAGE-B *****/
+
+/***** Section PAGE-C *****/
+.panel-signos p {
+  background: #5aa400;
+  border-radius: 0px 0px 0px 0px;
+ -moz-border-radius: 0px 0px 0px 0px;
+ -webkit-border-radius: 0px 0px 0px 0px;
+  border: 3px dashed #000000;
+}
+
+.imgSignos {
+  height: 90px;
+  width: 90px;
+}
+
+.imgDiv {
+  height: 230px;
+  width: 230px;
+  border-radius: 15px;
+}
+
+.card {
+  width: auto;
+}
+
+.card img {
+
+ width: 200px;
+ border-radius: 10px
+}
+
+/***** End Section PAGE-C *****/

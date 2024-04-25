@@ -1,0 +1,244 @@
+/***** Section index.html *****/
+.pagina-principal {
+  background-image: url(https://www.justiciajujuy.gov.ar/wp-content/uploads/2021/04/Justicia-digital.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  width: 8cm;
+}
+.logo img {
+  align-self: center;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+}
+.logo h3 {
+  margin-left: 20px;
+  align-self: center;
+  font-size: medium;
+}
+
+.barra-menu {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  margin-left: 5cm;
+  align-self: center;
+}
+
+.barra-menu li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 2.5cm;
+}
+
+.barra-menu a {
+  text-decoration: none;
+  padding: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.barra-menu a:hover {
+  background: rgb(241, 80, 66);
+}
+
+.seccion1 h1 {
+  padding-top: 2.5cm;
+  color: white;
+  text-align: center;
+  font-size: 1cm;
+}
+.seccion1 h3 {
+  color: white;
+  text-align: center;
+  font-size: 0.5cm;
+}
+.seccion1 div {
+  height: 1cm;
+  align-content: center;
+  padding-left: 0.5cm;
+  border: 2px solid #036393;
+  color: white;
+  background: #006699;
+}
+
+.seccion2 {
+  margin-top: 2cm;
+  align-content: space-between;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.seccion2 div {
+  width: 300px;
+  height: 150px;
+  margin: 3px;
+  background: white;
+  border: black 1px solid;
+  color: #036393;
+  text-align: left;
+  font-weight: bold;
+  align-content: center;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer section {
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1.5cm;
+}
+
+footer section h4 {
+  color: white;
+}
+
+footer div {
+  padding: 20px;
+  color: gray;
+}
+
+.logo-footer{
+  text-align: center;
+}
+
+/***** End Section index.html *****/
+
+/***** Section noticias.html*****/
+.portal-noticias {
+  background: white;
+}
+
+.encabezado-noticias {
+  background-image: url(https://justiciajujuy.gob.ar/wp-content/uploads/2021/07/EdificioCentral1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-y: -150px;
+  background-color: rgba(160, 159, 159, 0.871);
+  background-blend-mode: soft-light;
+  height: 3.5cm;
+  color: #1c80b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  height: 830px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.container .card {
+  width: 350px;
+  height: 530px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  color: grey;
+}
+
+.titulo-noticias {
+  padding: 8px;
+  text-align: center;
+  color: #0e334d;
+}
+.container .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img {
+  width: 350px;
+  height: 220px;
+}
+
+.container .card p {
+  padding: 0 1rem;
+  font-size: 13px;
+  text-align: justify;
+}
+
+.container .card a {
+  text-decoration: none;
+  color: #b7def7;
+}
+
+/***** End Section Noticias.html*****/
+
+/***** Section contactos.html *****/
+form {
+  width: 1000px;
+  background: #deedf7;
+  padding: 20px;
+  margin: auto;
+  margin-top: 40px;
+  color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+form div {
+  margin: 0.4em 0;
+  border: #dddddd 1px solid;
+  display: flex;
+  align-content: center;
+}
+
+form div label {
+  margin-left: 12px;
+  align-content: center;
+  width: 50%;
+  float: left;
+}
+
+.aclaracion {
+  background-color: #fff6bf;
+  border: 2px solid #ffd324;
+  color: black;
+  margin-bottom: 1cm;
+  padding: 8px;
+}
+.editTxt {
+  width: 30%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.editTxt1 {
+  width: 6%;
+  margin-right: 0.5cm;
+}
+
+.btn {
+  width: 95%;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding: 14px;
+  margin: 10px;
+}
+/***** End Section contactos.html *****/

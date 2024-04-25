@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticia - Jujuy</title>
+  </head>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="https://www.justiciajujuy.gov.ar/wp-content/uploads/elementor/thumbs/roundcube_logo-per0yuvdys7nzd44vdm95njip7apvxomow5drrhpis.png"
+        />
+        <h3>Poder Judicial de la Provincia de Jujuy</h3>
+      </div>
+      <nav class="barra-menu">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./noticias.html">Noticias</a></li>
+          <li><a href="./formulario.html">Formulario</a></li>
+        </ul>
+      </nav>
+    </header>
+    <form>
+      <header class="aclaracion">
+        Los datos sumnistrados en este formulario tienen CARACTER DE DECLARACION
+        JURADA y seran tratados de forma reservada
+      </header>
+      <div>
+        <label for="apellido">Apellido:</label>
+        <input
+          class="editTxt"
+          type="text"
+          id="apellido"
+          name="apellido"
+          required
+        />
+      </div>
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input class="editTxt" type="text" id="nombre" name="nombre" required />
+      </div>
+      <div>
+        <label for="tipo_numero">Tipo/Número:</label>
+        <select class="editTxt1" name="" id="">
+          <option value="" selected disabled></option>
+          <option value="DNI">DNI</option>
+          <option value="LC">LC</option>
+          <option value="LE">LE</option>
+          <option value="PAS">PAS</option>
+          <option value="CI">CI</option>
+        </select>
+        <input
+          class="editTxt"
+          type="text"
+          id="tipo_numero"
+          name="tipo_numero"
+          required
+        />
+      </div>
+      <div>
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input
+          class="editTxt"
+          type="date"
+          id="fecha_nacimiento"
+          name="fecha_nacimiento"
+          required
+        />
+      </div>
+      <div>
+        <label for="sexo">Sexo:</label>
+        <select class="editTxt" id="sexo" name="sexo" required>
+          <option value="" selected disabled>Seleccione</option>
+          <option value="M">M</option>
+          <option value="F">F</option>
+          <option value="No deseo informar ese dato">
+            No deseo informar ese dato
+          </option>
+        </select>
+      </div>
+      <div>
+        <label for="estado_civil">Estado Civil</label>
+        <select class="editTxt" name="estado_civil" id="Civil" required>
+          <option value="" selected disabled></option>
+          <option>Soltero</option>
+          <option>Casado</option>
+          <option>Viudo</option>
+          <option>Divorciado</option>
+        </select>
+      </div>
+      <div>
+        <label for="cuit">N* CUIT:</label>
+        <input class="editTxt" type="text" id="cuit" name="cuit" required />
+      </div>
+      <div>
+        <label for="domicilio_real">Domicilio Real:</label>
+        <input
+          class="editTxt"
+          type="text"
+          id="domicilio_real"
+          name="domicilio_real"
+          required
+        />
+      </div>
+      <div>
+        <label for="dni">DNI:</label>
+        <input class="editTxt" type="text" id="dni" name="dni" />
+      </div>
+      <div>
+        <label for="telefono">Teléfono:</label>
+        <input
+          class="editTxt"
+          type="tel"
+          id="telefono"
+          name="telefono"
+          required
+        />
+      </div>
+      <div>
+        <label for="ocupacion">Ocupación:</label>
+        <select class="editTxt" name="ocupacion" id="ocupacion">
+          <option value="" disabled selected>Seleccione</option>
+          <option value="estudiante">Estudante</option>
+          <option value="relacion_dependencia">Relacion de dependencia</option>
+          <option value="docente">Docente</option>
+          <option value="administrativo">Administrativo</option>
+        </select>
+      </div>
+      <div>
+        <label for="matricula_profesional">Matrícula Profesional:</label>
+        <input
+          class="editTxt"
+          type="text"
+          id="matricula_profesional"
+          name="matricula_profesional"
+        />
+      </div>
+      <div>
+        <label for="domicilio_laboral">Domicilio Laboral:</label>
+        <input
+          class="editTxt"
+          type="text"
+          id="domicilio_laboral"
+          name="domicilio_laboral"
+          required
+        />
+      </div>
+      <div>
+        <label for="titulo_1">Título 1:</label>
+        <input class="editTxt" type="text" id="titulo_1" name="titulo_1" />
+      </div>
+      <div>
+        <label for="titulo_2">Título 2:</label>
+        <input class="editTxt" type="text" id="titulo_2" name="titulo_2" />
+      </div>
+      <!-- Botones -->
+      <input class="btn" type="submit" value="Enviar" />
+      <input class="btn" type="reset" value="Borrar" />
+    </form>
+  </body>
+</html>

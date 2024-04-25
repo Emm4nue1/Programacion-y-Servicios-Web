@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<style>
+    div {
+        background-color: rgb(224, 224, 224);
+    }
+</style>
+
+<body>
+    <div class="container" style="text-align:center;">
+        <h2 class="display-1">FORM CREDIT CARD</h2>
+        <h6 class="display-6 fs-2">Are fields are mandatory</h6>
+    </div>
+
+    <form class="container" action="" id="PersInf">
+
+
+        <div class="mt-1 container bg-primary" style="color: white; font-size: 20px; text-align: center;">
+            <h3>PERSONAL INFORMATION</h3>
+        </div>
+
+        <div class="row mt-1 p-2">
+            <div class="container">
+                <h6>Title</h6>
+                <div class="form-check">
+                    <label class="form-check-label">Mr.</label>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">Ms.</label>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">Other</label>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+                <div class="col-6">
+                    <input type="text" placeholder="Please specify" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>FirstName</h6>
+                <input type="text" placeholder="FirstName" class="form-control">
+            </div>
+            <div class="col">
+                <h6>MiddleName</h6>
+                <input type="text" placeholder="MiddleName" class="form-control">
+            </div>
+            <div class="col">
+                <h6>LastName</h6>
+                <input type="text" placeholder="MiddleName" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>Gender</h6>
+                <div class="col form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Male</label>
+                </div>
+                <div class="col form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="col">
+                <h6>Date of Birth</h6>
+                <input type="date" class="form-control">
+            </div>
+            <div class="col">
+                <h6>Residential Status</h6>
+                <div class="col form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Resident Indian</label>
+                </div>
+                <div class="col form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Not Resident Indian</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>Nationality</h6>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Nationality</option>
+                    <option value="1">County 1</option>
+                    <option value="2">County 1</option>
+                    <option value="3">County 1</option>
+                </select>
+            </div>
+            <div class="col">
+                <h6>Driving License/Passport No.</h6>
+                <input type="number" class="form-control">
+            </div>
+            <div class="col">
+                <h6>PAN No.</h6>
+                <input type="number" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>Residential Address</h6>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>City</h6>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>City</option>
+                    <option value="1">City 1</option>
+                    <option value="2">City 2</option>
+                    <option value="3">City 3</option>
+                </select>
+            </div>
+            <div class="col">
+                <h6>PIN</h6>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>Phone Number No. (Home)</h6>
+                <input type="number" placeholder="With STD code" class="form-control">
+            </div>
+            <div class="col">
+                <h6>Mobile No.</h6>
+                <input type="number" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mt-3 p-2">
+            <div class="col">
+                <h6>Email</h6>
+                <input type="email" class="form-control">
+            </div>
+            <div class="col">
+                <h6>Education</h6>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col">
+                <h6>Last University/College</h6>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>Marital Status</h6>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Married</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Single</label>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="container">
+                    <h6>Residential Details</h6>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">Own Home</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">Rented</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">Company Lease</label>
+                    </div>
+
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">Other</label>
+                    </div>
+
+                    <div>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-1 p-2 justify-content-center text-center">
+                <h6>Tenure at current address</h6>
+                <div class="col-2">
+                    <input class="form-control" type="number" placeholder="Year">
+                </div>
+                <br>
+                <div class="col-2">
+                    <input class="form-control" type="number" placeholder="Month">
+                </div>
+
+
+        </div>
+
+        <div class="row mt-1 p-2">
+            <div class="col">
+                <h6>Vehicle Car</h6>
+                <input class="form-control" type="text " placeholder="Brand">
+                <br>
+                <input class="form-control" type="text" placeholder="Make">
+                <br>
+                <input class="form-control" type="text" placeholder="Model">
+            </div>
+            <div class="col">
+                <h6>Where would you like to receive your statament?</h6>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Office address</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Home address</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div>
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label"><strong>Yes,I want to apply for an Additional Card to separate
+                        different categories of expenditure</strong> </label>
+            </div>
+
+
+            <div class="d-grid gap-2 p-3">
+                <button class="btn btn-primary" type="button">Send</button>
+        </div>
+
+        </div>
+
+
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
