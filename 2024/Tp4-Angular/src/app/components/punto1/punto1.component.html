@@ -1,0 +1,70 @@
+<div class="container-fluid p-3">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 p-2 m-2 g-5">
+        @for (producto of articulos; track producto.id) {
+        <div class="col">
+            <div class="card text-center">
+                <img src="{{producto.imagen}}" class="card-img-top" alt="tv">
+                <div class="card-body">
+                    <h5 class="card-title">{{producto.nombre.toUpperCase()}}</h5>
+                    <p class="card-text">
+                        <small>{{producto.descripcion}}</small>
+                    </p>
+                </div>
+                <div class="mb-5 d-flex justify-content-around">
+                    <h3>{{producto.precio.toLocaleString("es-AR",{style:"currency", currency:"ARS"})}}</h3>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalcompras"
+                        (click)="agregarCarrito(producto)">
+                        <i class="bi bi-cart-plus-fill"></i> Agregar</button>
+                </div>
+            </div>
+        </div>
+        }
+        <div class="modal fade" id="Modalcompras" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row text-center">
+                            <div class="col">
+                                <label>PRODUCTO</label>
+                            </div>
+                            <div class="col">
+                                <label>CANTIDAD</label>
+                            </div>
+                            <div class="col">
+                                <label for="text-center">PRECIO</label>
+                            </div>
+                            <div class="col">
+                                <label>TOTAL</label>
+                            </div>
+                        </div>
+                        @for (x of carrito; track x.id) {
+                        <div class="row text-center">
+                            <div class="col">
+                                <p>{{x.nombre}}</p>
+                            </div>
+                            <div class="col quantity"><input id="quantity" type="number" [(ngModel)]="x.cantidad"
+                                    min="1" class="form-control quantity-input"></div>
+                            <div class="col">
+                                <p>{{x.precio.toLocaleString("es-AR",{style:"currency", currency:"ARS"})}}</p>
+                            </div>
+                            <div class="col">
+                                <p>{{(+x.precio * +x.cantidad).toLocaleString("es-AR",{style:"currency", currency:"ARS"})}}
+                                </p>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                        <button type="button" class="btn btn-primary">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
