@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col g-4" *ngFor="let x of listaNoticias">
+            <div class="card text-center" style="width:18rem;">
+              <img class="text-center" [src]="x.mainMedia[0].gallery.url" class="card-img-top"  alt="{{x.mainMedia[0].gallery.alt}}" style="width: 286px; height: 180px;">
+              <div class="card-body">
+                <h5 class="card-title">{{x.title}}</h5>
+                <p class="card-subtitle">{{x.updatedAt.time}} {{x.updatedAt.unit}}</p>
+                <hr>
+                <p class="card-text">{{x.categoryLabel}}</p>
+                <a [href]="'https://www.livescore.com' + x.url" target="_blank">Leer la noticia completa</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

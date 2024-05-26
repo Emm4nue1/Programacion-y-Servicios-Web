@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<div class="container">
+    <i class="bi bi-arrow-left-circle d-flex justify-content-end m-3" routerLink="/punto-5" routerLinkActive="active"></i>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Dni</th>
+            <th>Tipo</th>
+            <th>Fecha</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (x of tickets ; track x.id) {   
+          <tr>
+            <td>{{x.nombre}}</td>
+            <td>{{x.dni}}</td>
+            <td>{{x.tipo}}</td>
+            <td>{{x.fecha}}</td>
+            <td>{{x.precio}}</td>
+            <td class="align-content-center">
+              <button type="button" class="btn btn-primary ms-2 mt-1" routerLink="/punto-5/resumen" routerLinkActive="active">Editar</button>
+              <button type="submit" class="btn btn-danger ms-2 mt-1" (click)="eliminarTicket(x.id)">Eliminar</button>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+</div>

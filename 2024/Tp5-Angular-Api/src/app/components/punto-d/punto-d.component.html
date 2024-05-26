@@ -1,0 +1,12 @@
+    <div class="container p-5">
+        <div class="row"> 
+            <div class="mb-3">
+            <label class="form-label display-4">Ingrese link para hacer QR</label>
+            <input type="text" class="form-control" id="texto" [(ngModel)]="texto">
+          </div>
+        </div>
+        <button type="button" class="btn btn-success btn-lg" (click)="generarQr()">Generar QR</button>
+        <div class="row p-5">
+        <img [src]="'data:image/png;base64,' + qrCode" alt="QR generado" class="w-50 h-50" >
+        </div>
+    </div>

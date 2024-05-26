@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { producto } from '../../models/producto';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-punto1',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,RouterModule],
   templateUrl: './punto1.component.html',
   styleUrl: './punto1.component.css'
 })

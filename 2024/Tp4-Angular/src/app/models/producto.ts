@@ -1,12 +1,12 @@
 export class producto {
-    id:Number;
-    imagen:String;
-    nombre:String;
-    descripcion:String;
-    precio:Number;
-    cantidad:Number;
+    id:number;
+    imagen:string;
+    nombre:string;
+    descripcion:string;
+    precio:number;
+    cantidad:number;
 
-    constructor(id:Number, imagen:String,nombre:String,descripcion:String,precio:Number) {
+    constructor(id:number, imagen:string,nombre:string,descripcion:string,precio:number) {
         this.id=id;
         this.imagen=imagen;
         this.nombre=nombre;
