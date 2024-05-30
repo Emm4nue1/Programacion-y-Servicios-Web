@@ -1,3 +1,36 @@
 <div class="container-fluid">
-    
+    <div class="row p-5 g-3 row-cols-auto">
+        <div class="col" *ngFor="let x of cocina">
+            <div class="card" style="width:18rem;">
+                <img [src]="x.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{x.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted ">{{x.newCategory}}</h6>
+                    <p class="card-text">{{x.path}}</p>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-lg btn-primary" (click)="mostrarDetalles(x.path)" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver detalles</button>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body text-center" *ngFor="let a of rta">
+                          <p>{{a}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
 </div>
