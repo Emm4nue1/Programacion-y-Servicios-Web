@@ -14,21 +14,25 @@ import { RouterModule } from '@angular/router';
 })
 export class PuntoAComponent {
   texto:string="";
-  idioma:string="";
-  traduccion:string="";
+  origen:string="es";
+  destino:string="";
+  textoTraducido:string="";
   listaIdiomas:any[]=[];
 
   constructor(private traductor:TraductorService){
     this.obtenerIdiomas();
   }
 
-
   obtenerIdiomas(): void {
     this.traductor.getLenguaje().subscribe((respuesta:any) => {
       console.log(respuesta);
       this.listaIdiomas = respuesta.data.languages.map((lang:any) => lang.language);
-      console.log(this.listaIdiomas);
     });
   }
 
+  traducirTexto(){
+    this.traductor.traduccirTexto(this.texto,this.destino,this.origen).subscribe((txt:any) => {
+    this.textoTraducido= txt.data.translations[0].translatedText;
+    });
+  }
 }

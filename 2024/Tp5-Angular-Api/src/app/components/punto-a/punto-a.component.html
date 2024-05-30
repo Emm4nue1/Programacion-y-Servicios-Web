@@ -12,14 +12,15 @@
                     <i class="bi bi-arrow-left-right fs-1" id="icon-traductor"></i>
                 </div>
                 <div class="mt-4">
-                    <select class="form-control text-center" name="idiomaSalida" [(ngModel)]="idioma" >
-                        <option *ngFor="let idioma of listaIdiomas"  [value]="idioma">{{idioma}}</option>
+                    <select class="form-control text-center" name="idiomaSalida" [(ngModel)]="destino">
+                        <option *ngFor="let x of listaIdiomas" [value]="x">{{x}}</option>
                     </select>
                 </div>
             </div>
             <div class="col-5 text-center">
                 <div class="form-group">
-                    <textarea class="form-control" id="idioma2" rows="10" [(ngModel)]="traduccion" disabled></textarea>
+                    <textarea class="form-control" id="idioma2" rows="10" [(ngModel)]="textoTraducido"
+                        disabled></textarea>
                 </div>
             </div>
         </div>
