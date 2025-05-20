@@ -3,31 +3,26 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClimaService {
-private x="https://hapi-books.p.rapidapi.com/top_authors";
+  private baseUrl = 'https://hapi-books.p.rapidapi.com';
 
+  constructor(private http: HttpClient) {}
 
-
-  constructor(private htpp: HttpClient) { }
-
-  getAutor():Observable<any>{
+  getAutor(): Observable<any> {
     const headers = new HttpHeaders({
-      'x-rapidapi-key': 'fc4632e173msh84c3f3b62b5615bp13bc20jsn43ab32a5a833',
-      'x-rapidapi-host': 'hapi-books.p.rapidapi.comhapi-books.p.rapidapi.com'
+      'x-rapidapi-key': 'e1dce37a05msh1434ca70e470895p1255fajsn19a76c057f19',
+      'x-rapidapi-host': 'hapi-books.p.rapidapi.com',
     });
-    return this.htpp.get(this.x, { headers: headers });
+    return this.http.get(`${this.baseUrl}/top_authors`, { headers });
   }
 
-  getDetalle(id:number):Observable<any>{
-    const url1="https://hapi-books.p.rapidapi.com/author/"+id;
+  getDetalle(id: number): Observable<any> {
     const headers = new HttpHeaders({
-      'x-rapidapi-key': 'fc4632e173msh84c3f3b62b5615bp13bc20jsn43ab32a5a833',
-      'x-rapidapi-host': 'hapi-books.p.rapidapi.com'
+      'x-rapidapi-key': 'e1dce37a05msh1434ca70e470895p1255fajsn19a76c057f19',
+      'x-rapidapi-host': 'hapi-books.p.rapidapi.com',
     });
-
-    return this.htpp.get(url1, { headers: headers});
+    return this.http.get(`${this.baseUrl}/author/${id}`, { headers });
   }
-
 }

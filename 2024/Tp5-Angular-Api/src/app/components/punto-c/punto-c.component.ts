@@ -12,15 +12,13 @@ import { RouterModule } from '@angular/router';
   styleUrl: './punto-c.component.css'
 })
 export class PuntoCComponent {
-  marcas: any[] = [];
-  modelo: any[] = [];
-  seleccionardMarca: any;
+  marcas!: any;
+  modelos!: any;
 
   constructor(private autosService: AutosService) { 
     this.obtenerMarcas();
   }
 
-  
   obtenerMarcas(): void {
     this.autosService.getMarca().subscribe((marca: any) => {
       this.marcas = marca;
@@ -29,12 +27,8 @@ export class PuntoCComponent {
 
   obtenerModelos(id: number): void {
     this.autosService.getModelo(id).subscribe((modelo: any) => {
-      this.modelo = modelo;
+      this.modelos = modelo;
     })
   }
 
-  seleccionarMarca(marca: any): void {
-    this.seleccionardMarca = marca; 
-    this.obtenerModelos(marca.id);
-  }
 }

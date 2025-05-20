@@ -1,45 +1,56 @@
 <div class="container-fluid">
-    <div class="row p-5 g-3 row-cols-auto">
-        <div class="col" >
-            <table class="table" >
-
-                  <thead >
-                    <tr >
-                      <th scope="col">id autor</th>
-                      <th scope="col">nombre de autor</th>
-                      <th scope="col">foto de autor</th>
-                    </tr>
-                  </thead>
-                  <tbody *ngFor="let x of z">
-                    <tr>
-                      <td>
-                          <button type="button" class="btn btn-lg btn-primary" (click)="ObteneDetalle(x.author_id)" data-bs-toggle="modal" data-bs-target="#exampleModal">{{x.author_id}}</button>
-                      </td>
-                      <td>{{x.name}}</td>
-                      <td><img src="{{x.image}}" alt=""></td>
-                    </tr>
-                  </tbody>
-
-              </table>
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body text-center">
-                      <p> {{detalles?.info}}</p>
-                      <p *ngFor="let x of detalles.author_books"> {{x.name}}</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                  </div>
-                </div>
+  <div class="row p-5 g-3 row-cols-auto">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID Autor</th>
+            <th scope="col">Nombre de Autor</th>
+            <th scope="col">Foto de Autor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let l of z">
+            <td>
+              <button type="button" class="btn btn-lg btn-primary" (click)="ObteneDetalle(l.author_id)">
+                Ver Detalles
+              </button>
+            </td>
+            <td>{{ l.name }}</td>
+            <td><img src="{{ l.image }}" alt="Foto de autor" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        #exampleModal
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>{{ detalles?.info }}</p>
+              <div *ngIf="detalles?.author_books; else noBooks">
+                <p *ngFor="let q of detalles.author_books">{{ q.name }}</p>
               </div>
+              <ng-template #noBooks>
+                <p>No hay libros disponibles.</p>
+              </ng-template>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
