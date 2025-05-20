@@ -6,11 +6,10 @@ import { RouterModule } from '@angular/router';
 
 
 @Component({
-  selector: 'app-punto-a',
-  standalone: true,
-  imports: [CommonModule,FormsModule,RouterModule],
-  templateUrl: './punto-a.component.html',
-  styleUrl: './punto-a.component.css'
+    selector: 'app-punto-a',
+    imports: [CommonModule, FormsModule, RouterModule],
+    templateUrl: './punto-a.component.html',
+    styleUrl: './punto-a.component.css'
 })
 export class PuntoAComponent {
   texto:string="";

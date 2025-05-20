@@ -5,11 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-punto-c',
-  standalone: true,
-  imports: [CommonModule, FormsModule,RouterModule],
-  templateUrl: './punto-c.component.html',
-  styleUrl: './punto-c.component.css'
+    selector: 'app-punto-c',
+    imports: [CommonModule, FormsModule, RouterModule],
+    templateUrl: './punto-c.component.html',
+    styleUrl: './punto-c.component.css'
 })
 export class PuntoCComponent {
   marcas!: any;

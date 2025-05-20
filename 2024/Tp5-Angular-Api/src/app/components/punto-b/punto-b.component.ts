@@ -4,11 +4,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-punto-b',
-  standalone: true,
-  imports: [CommonModule,RouterModule],
-  templateUrl: './punto-b.component.html',
-  styleUrl: './punto-b.component.css'
+    selector: 'app-punto-b',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './punto-b.component.html',
+    styleUrl: './punto-b.component.css'
 })
 export class PuntoBComponent {
   listaNoticias: any [] = [];

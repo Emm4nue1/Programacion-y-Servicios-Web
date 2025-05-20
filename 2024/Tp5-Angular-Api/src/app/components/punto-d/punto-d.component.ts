@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-punto-d',
-  standalone: true,
-  imports: [FormsModule,RouterModule],
-  templateUrl: './punto-d.component.html',
-  styleUrl: './punto-d.component.css'
+    selector: 'app-punto-d',
+    imports: [FormsModule, RouterModule],
+    templateUrl: './punto-d.component.html',
+    styleUrl: './punto-d.component.css'
 })
 export class PuntoDComponent {
   texto:string="";
